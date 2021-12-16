@@ -19,7 +19,7 @@
 # THE SOFTWARE.
 
 module Async
-	module Pool
-		VERSION = "0.3.9"
-	end
+  module Pool
+    VERSION = "0.3.9"
+  end
 end
