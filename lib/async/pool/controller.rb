@@ -159,7 +159,7 @@ module Async
       end
 
       def retire(resource)
-        Console.logger.debug(self) {"Retire #{resource}"}
+        Console.logger.warn(self) {"Retire #{resource}"}
 
         @resources.delete(resource)
 
@@ -306,7 +306,7 @@ module Async
         end
 
         if @limit.nil? or @resources.size < @limit
-          Console.logger.debug(self) {"No available resources, allocating new one..."}
+          Console.logger.info(self) {"No available resources, allocating new one..."}
 
           return create_resource
         end
